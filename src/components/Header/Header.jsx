@@ -1,10 +1,11 @@
 import React from "react";
 import s from './Header.module.css';
+import logo from '../../assets/img/rubber-duckblack.png'
 
 const Header = () => {
     return (
         <header className={s.header}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Wikimedia-logo.png" alt=""/>
+            <img src={logo} alt=""/>
         </header>)
 }
 
