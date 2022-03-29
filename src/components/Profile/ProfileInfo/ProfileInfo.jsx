@@ -6,7 +6,7 @@ const ProfileInfo = () => {
     return (
         <div>
             <div>
-                <img src={imgBg}
+                <img className={s.imgBg} src={imgBg}
                      alt=""/>
             </div>
             <div className={s.descriptionBlock}>
