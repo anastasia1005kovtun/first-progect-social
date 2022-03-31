@@ -1,3 +1,6 @@
+const ADD_POST = 'ADD-POST'
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
+
 const store = {
     _state: {
         profilePage: {
@@ -56,13 +59,11 @@ const store = {
             this.getState().profilePage.posts.push(newPost);
             this.getState().profilePage.newPostText = ''
             this._callSubscriber(store)
-        }
-        else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
             this.getState().profilePage.newPostText = action.text;
             this._callSubscriber(store)
 
-        }
-        else if (action.type === 'ADD-NEW-MESSAGE') {
+        } else if (action.type === 'ADD-NEW-MESSAGE') {
             let newMessage = {
                 id: 6,
                 messageText: store.getState().dialogsPage.newMessage,
@@ -71,14 +72,17 @@ const store = {
             this.getState().dialogsPage.messages.push(newMessage)
             this.getState().dialogsPage.newMessage = ''
             this._callSubscriber(store)
-        }
-        else if (action.type === 'UPDATE-NEW-MESSAGE') {
+        } else if (action.type === 'UPDATE-NEW-MESSAGE') {
 
             this.getState().dialogsPage.newMessage = action.text
             this._callSubscriber(store)
         }
     }
 }
+export const addPostActionCreator = () => ({type: ADD_POST})
+
+export const onPostChangeActionCreator = (text) =>
+    ({type: UPDATE_NEW_POST_TEXT, text: text})
 
 window.store = store
 export default store
