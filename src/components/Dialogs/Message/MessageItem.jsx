@@ -10,7 +10,6 @@ const MessagesItem = (props) => { // props: {message: string, id: number, me: bo
                 <img className={s.avaMessage} src={avaMessages} alt=""/>
             </div>
             <p> {props.message}</p>
-
         </div>
     )
 }

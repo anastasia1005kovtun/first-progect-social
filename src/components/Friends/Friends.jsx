@@ -21,8 +21,8 @@ export default Friends
 
 /**
  * Створити компоненту Playlist
- * Створити state з таким виглядом
- * let state = {
+ * Створити store з таким виглядом
+ * let store = {
  *     mainPage: {
  *         title: string,
  *         description: string
@@ -38,7 +38,7 @@ export default Friends
  *         {..}
  *     ]
  * }
- * В Компоненту Playlist передати пропси типу state
+ * В Компоненту Playlist передати пропси типу store
  * В Компоненті Playlist створити Компоненту MainInfo яка приймає пропси типу mainPage і повертає JSX <h1>{title}</h1><h2>{description}</h2>
  * Створити компоненту Music яка приймає пропси musics конкретного обєкта в масиві і повертає JSX
  *
